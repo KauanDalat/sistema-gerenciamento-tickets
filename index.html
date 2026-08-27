@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Tickets</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2 id="formTitle">REGISTRAR NOVO TICKET</h2>
+        <form id="ticketForm">
+            <input type="hidden" id="editIndex" value="">
+            
+            <div class="form-group">
+                <label>Num. Ticket:</label>
+                <input type="number" id="numTicket" required>
+            </div>
+
+            <div class="form-group">
+                <label>Status:</label>
+                <select id="status">
+                    <option value="Novo">Novo</option>
+                    <option value="Em Andamento">Em Andamento</option>
+                    <option value="Sem Resposta">Sem Resposta</option>
+                    <option value="Concluído">Concluído</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Data de Criação:</label>
+                <input type="date" id="dataCriacao" required>
+            </div>
+
+            <div class="form-group">
+                <label>Situação:</label>
+                <select id="situacao">
+                    <option value="Em desenvolvimento">Em desenvolvimento</option>
+                    <option value="Sem resposta">Sem resposta</option>
+                    <option value="Aguardando Cliente">Aguardando Cliente</option>
+                    <option value="Resolvido">Resolvido</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Categoria:</label>
+                <select id="categoria">
+                    <option value="Inconsistencia">Inconsistencia</option>
+                    <option value="Sug melhoria">Sug melhoria</option>
+                    <option value="Dúvida">Dúvida</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Conclusão:</label>
+                <input type="text" id="conclusao">
+            </div>
+
+            <div class="form-group">
+                <label>OBS:</label>
+                <input type="text" id="obs">
+            </div>
+
+            <div class="button-group">
+                <button type="submit" id="btnSalvar">Salvar Ticket</button>
+                <button type="button" id="btnCancelar" class="btn-cancelar" onclick="cancelarEdicao()" style="display: none;">Cancelar</button>
+            </div>
+        </form>
+
+        <hr style="margin: 30px 0; border: 1px solid #ccc;">
+
+        <!-- BUSCADOR E ORDENAÇÃO -->
+        <div class="search-container">
+            <div>
+                <label for="inputBusca"><strong>Buscar Ticket:</strong></label>
+                <input type="number" id="inputBusca" placeholder="Número do ticket..." oninput="filtrarTickets()">
+            </div>
+            
+            <div>
+                <label for="selectOrdenacao"><strong>Ordenar por Data:</strong></label>
+                <select id="selectOrdenacao" onchange="ordenarTickets()">
+                    <option value="padrao">Padrão</option>
+                    <option value="recente">Mais novo</option>
+                    <option value="antigo">Mais antigo</option>
+                </select>
+            </div>
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="7" class="table-title">TICKETS PENDENTES</th>
+                </tr>
+                <tr>
+                    <th>NUM. TICKET</th>
+                    <th>STATUS</th>
+                    <th>DATA DE CRIAÇÃO</th>
+                    <th>Situação</th>
+                    <th>Categoria</th>
+                    <th>Conclusão</th>
+                    <th>Ações / OBS</th>
+                </tr>
+            </thead>
+            <tbody id="ticketTableBody">
+                <!-- Os dados entram aqui dinamicamente -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

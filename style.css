@@ -1,0 +1,197 @@
+body {
+    font-family: Calibri, Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #20579e;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    background: #eef2eb;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.button-group {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 10px;
+}
+
+button[type="submit"] {
+    flex: 1;
+    background-color: #5B7C28;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #466D1D;
+}
+
+.btn-cancelar {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-cancelar:hover {
+    background-color: #5a6268;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #A6A6A6;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.table-title {
+    background-color: #466D1D;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+thead th:not(.table-title) {
+    background-color: #5B7C28;
+    color: white;
+}
+
+/* Cores dinâmicas para Situação */
+.badge-desenvolvimento {
+    background-color: #2F5597;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.badge-resposta {
+    background-color: #ED7D31;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+/* Cores dinâmicas para Categoria */
+.text-inconsistencia {
+    color: #C00000;
+    font-weight: bold;
+}
+
+.text-sugestao {
+    color: #00B050;
+    font-weight: bold;
+}
+
+.btn-acao {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.btn-editar {
+    background: #007bff;
+    color: white;
+}
+
+.btn-editar:hover {
+    background: #0056b3;
+}
+
+.btn-excluir {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-excluir:hover {
+    background: #bd2130;
+}
+
+.search-container {
+    margin: 25px 0 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #eef2eb;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.search-container input {
+    padding: 8px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.search-container {
+    margin: 25px 0 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    background: #eef2eb;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.search-container input, .search-container select {
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-left: 5px;
+}
